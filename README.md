@@ -1,7 +1,7 @@
 # Twicle
 Android app for twitter users
 
-This app is made for twitter users.This help you to view the tweets in Twitter.
+This app is made for twitter users.This help you view the tweets.
 
 When this app open,shake service start.
 This service is to open the tweets pop up when you shake your device.
