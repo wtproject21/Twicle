@@ -7,7 +7,7 @@ When this app open,shake service start.
 This service is to open the tweets pop up when you shake your device.
 The pop up will show you a recent tweet on your twitter timeline.
 This service stays running while running other apps.
-If you want to stop this service,you touch nottice by this app.
+If you want to stop this service,you touch this app nottice.
 
 Main activity:
 
