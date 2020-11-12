@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wt.project.twitter">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <receiver android:name="com.wt.project.twitter.NewAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/new_app_widget_info" />
+        </receiver>
+        <activity
+            android:name="com.wt.project.twitter.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+        android:label="@string/app_name"
+        android:name="com.wt.project.twitter.IndexActivity" >
+        <intent-filter >
+
+            <data android:scheme="testtwitter" android:host="twitter4j" android:path="/"/>
+        </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wt.project.twitter.TwitterOAuthActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:scheme="twittergo" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.wt.project.twitter.LoginTwitterActivity" ></activity>
+        <activity
+            android:name="com.wt.project.twitter.SearchActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name="com.wt.project.twitter.TweetPopActivity"></activity>
+        <service android:name="com.wt.project.twitter.OverlapService"/>
+        <service android:name="com.wt.project.twitter.MotionService"/>
+    </application>
+
+
+</manifest>
