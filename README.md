@@ -35,3 +35,6 @@ Widget:
 
 This widget shows tweets.This can update automatically every 2 minutes.
 when you touch the tweet on this widget,the tweet pop up you can like,retweet and reply to the tweet open.
+
+
+You can install this app by apk from https://github.com/wtproject21/Twicle/tree/main/TwitterAce/app/release
